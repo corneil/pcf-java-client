@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2018 the original author or authors.
+ * Copyright 2018-2024 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.Optional;
 import java.util.function.Function;
 
 /**
- * A utility class to provide functions for handling {@link PaginatedResponse}s and those containing lists of {@link Resource}s.
+ * A utility class to provide functions for handling {@link PaginatedResponse}s and those containing lists of {@link io.pivotal.scheduler.v1.Resource}s.
  */
 public final class PaginationUtils {
 
@@ -39,7 +39,6 @@ public final class PaginationUtils {
      * @param <U>          the type of {@link PaginatedResponse}.
      * @return a stream of <code>T</code> objects.
      */
-    @SuppressWarnings("rawtypes")
     public static <T, U extends PaginatedResponse<T>> Flux<T> requestResources(Function<Integer, Mono<U>> pageSupplier) {
         return pageSupplier
             .apply(1)

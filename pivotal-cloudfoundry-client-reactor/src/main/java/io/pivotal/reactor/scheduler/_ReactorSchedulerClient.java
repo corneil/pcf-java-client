@@ -30,7 +30,7 @@ import java.util.Collections;
 import java.util.Map;
 
 /**
- * The Reactor-based implementation of {@link SchedulerClient}
+ * The Reactor-based implementation of {@link io.pivotal.scheduler.SchedulerClient}
  */
 @Value.Immutable
 abstract class _ReactorSchedulerClient implements SchedulerClient {
